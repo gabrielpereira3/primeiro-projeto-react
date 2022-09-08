@@ -1,0 +1,14 @@
+.button-load {
+    width: 100%;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+.button-load:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
