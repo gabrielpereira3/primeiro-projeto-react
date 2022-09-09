@@ -1,10 +1,14 @@
+import P from 'prop-types';
+
 import './styles.css';
 
 import { PostCard } from '../PostCard';
 
-export const Posts = ({posts}) => (
+import React  from 'react';
+
+export const Posts = ({ posts = [] }) => (
     <div className="posts">
-        {posts.map(post => (
+        {posts.map((post) => (
             <PostCard
             key={post.id}
             title={post.title}
@@ -14,4 +18,12 @@ export const Posts = ({posts}) => (
             />
         ))}
     </div>
-)
+);
+
+Posts.defaultProps = {
+  posts: [],
+};
+
+Posts.propTypes = {
+  posts: P.array,
+};
